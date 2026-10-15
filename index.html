@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Result Management</title>
+   
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h2>Student Result System</h2>
+        
+        
+        <form id="studentForm">
+            <input type="text" id="studentName" placeholder="Student Name" required>
+            <input type="number" id="rollNo" placeholder="Roll Number" required>
+            
+            <input type="number" id="mathMarks" placeholder="Math Marks (out of 100)" required min="0" max="100">
+            <input type="number" id="scienceMarks" placeholder="Science Marks (out of 100)" required min="0" max="100">
+            <input type="number" id="englishMarks" placeholder="English Marks (out of 100)" required min="0" max="100">
+            
+            <button type="submit">Add Student</button>
+        </form>
+
+        
+        <div id="topperDisplay" class="topper-box">
+            <h3>Current Topper: <span id="topperName">None</span> (<span id="topperScore">0</span>%)</h3>
+        </div>
+
+        
+        <table id="resultTable">
+            <thead>
+                <tr>
+                    <th>Roll No</th>
+                    <th>Name</th>
+                    <th>Math</th>
+                    <th>Science</th>
+                    <th>English</th>
+                    <th>Total (300)</th>
+                    <th>Percentage</th>
+                </tr>
+            </thead>
+            
+            <tbody id="tableBody">
+            </tbody>
+        </table>
+    </div>
+
+    
+    <script src="script.js"></script>
+</body>
+</html>
